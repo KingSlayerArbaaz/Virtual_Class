@@ -1,0 +1,280 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Virtual Class</title>
+	<link href="../static/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../static/css/font-awesome.min.css" rel="stylesheet">
+	<link href="../static/css/datepicker3.css" rel="stylesheet">
+	<link href="../static/css/styles.css" rel="stylesheet">
+	
+	<!--Custom Font-->
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<style type="text/css">
+	.bg-success
+	{
+	background-color:#009900;
+	}
+	.bg-warning
+	{
+	background-color:#0099CC;
+	}
+	.bg-danger
+	{
+	background-color:#FF0000;
+	}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse"><span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span></button>
+				<a class="navbar-brand" href="#"><span>Virtual Class</span></a>
+				<ul class="nav navbar-top-links navbar-right">
+					<li class="dropdown"><a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+						<em class="fa fa-envelope"></em><span class="label label-danger">15</span>
+					</a>
+						<ul class="dropdown-menu dropdown-messages">
+							<li>
+								<div class="dropdown-messages-box"><a href="profile.html" class="pull-left">
+									<img alt="image" class="img-circle" src="http://placehold.it/40/30a5ff/fff">
+									</a>
+									<div class="message-body"><small class="pull-right">3 mins ago</small>
+										<a href="#"><strong>John Doe</strong> commented on <strong>your photo</strong>.</a>
+									<br /><small class="text-muted">1:24 pm - 25/03/2015</small></div>
+								</div>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<div class="dropdown-messages-box"><a href="profile.html" class="pull-left">
+									<img alt="image" class="img-circle" src="http://placehold.it/40/30a5ff/fff">
+									</a>
+									<div class="message-body"><small class="pull-right">1 hour ago</small>
+										<a href="#">New message from <strong>Jane Doe</strong>.</a>
+									<br /><small class="text-muted">12:27 pm - 25/03/2015</small></div>
+								</div>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<div class="all-button"><a href="#">
+									<em class="fa fa-inbox"></em> <strong>All Messages</strong>
+								</a></div>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown"><a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+						<em class="fa fa-bell"></em><span class="label label-info">5</span>
+					</a>
+						<ul class="dropdown-menu dropdown-alerts">
+							<li><a href="#">
+								<div><em class="fa fa-envelope"></em> 1 New Message
+									<span class="pull-right text-muted small">3 mins ago</span></div>
+							</a></li>
+							<li class="divider"></li>
+							<li><a href="#">
+								<div><em class="fa fa-heart"></em> 12 New Likes
+									<span class="pull-right text-muted small">4 mins ago</span></div>
+							</a></li>
+							<li class="divider"></li>
+							<li><a href="#">
+								<div><em class="fa fa-user"></em> 5 New Followers
+									<span class="pull-right text-muted small">4 mins ago</span></div>
+							</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div><!-- /.container-fluid -->
+	</nav>
+	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+		<div class="profile-sidebar">
+			<div class="profile-userpic">
+				<img src="../static/images/admic.jpg" class="img-responsive" alt="">
+			</div>
+			<div class="profile-usertitle">
+				<div class="profile-usertitle-name">{{name}} ({{uname}})</div>
+				<div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="divider"></div>
+		
+		<ul class="nav menu">
+			<li class="active"><a href="/ins_home"><em class="fa fa-dashboard">&nbsp;</em> Dashboard</a></li>
+			
+			<li class="parent "><a data-toggle="collapse" href="#sub-item-2">
+				<em class="fa fa-navicon">&nbsp;</em> Update <span data-toggle="collapse" href="#sub-item-2" class="icon pull-right"><em class="fa fa-plus"></em></span>
+				</a>
+				<ul class="children collapse" id="sub-item-2">
+					<li><a class="" href="/ins_sem">
+						<span class="fa fa-arrow-right">&nbsp;</span> Update Semester
+					</a></li>
+					
+					
+				</ul>
+			</li>
+			<li><a href="/ins_subject"><em class="fa-cc-paypal">&nbsp;</em> Subject</a></li>
+			<li><a href="/ins_table"><em class="fa-cc-paypal">&nbsp;</em> Time Table</a></li>
+			<li><a href="/logout"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
+		</ul>
+	</div><!--/.sidebar-->
+		
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+		<div class="row">
+			<ol class="breadcrumb">
+				<li><a href="#">
+					<em class="fa fa-home"></em>
+				</a></li>
+				<li class="active"><a href="/ins_att">Attendance</a></li>
+			</ol>
+		</div><!--/.row-->
+		
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">Report</h1>
+			</div>
+		</div><!--/.row-->
+		
+		<form name="form1" method="post">
+		<div class="row">
+			<div class="col-lg-3">
+			
+				<input type="text" name="rdate" class="form-control" value="{{rdd}}">
+								
+			</div>
+			<div class="col-lg-3">
+				<select class="form-control" name="dept">
+								<option value="">-Department-</option>
+								{% for r1 in value1 %}
+								<option>{{r1[0]}}</option>
+								{% endfor %}
+								</select>
+			</div>
+			<div class="col-lg-3">
+			<select name="sem" class="form-control">
+					  <option value="">-Semester-</option>
+					  <option value="1">Semester1</option>
+					  <option value="2">Semester2</option>
+					  <option value="3">Semester3</option>
+					  <option value="4">Semester4</option>
+					  <option value="5">Semester5</option>
+					  <option value="6">Semester6</option>
+					  <option value="7">Semester7</option>
+					  <option value="8">Semester8</option>
+					  </select>
+			</div>
+			<div class="col-lg-3">
+			<input type="submit" name="btn" class="btn" value="Go">
+			</div>
+		</div>
+		
+		<p>&nbsp;</p>
+		<!--/.row-->
+		
+		<div class="panel panel-container">
+		
+		
+		<div class="row">
+		{% for rs in data %}
+		<div class="col-lg-3">
+		  <table class="table table-striped thead-dark table-bordered table-hover">
+             <tr>
+			 <th>Register No.: {{rs[0]}}</th>
+			 </tr>
+			 <tr>
+			 <td align="center"><img src="../static/upload/d_{{rs[0]}}.jpg" width="100" height="100"></td>
+			 </tr>
+			 
+			 
+			 
+			 <tr>
+			   <td>Name: {{rs[1]}}</td>
+		    </tr>
+			 <tr>
+			   <td>Questions: {{rs[3]}} , {{rs[2]}} </td>
+		    </tr>
+			 <tr>
+			   <td>Duration of CA: {{rs[5]}} / {{rs[6]}} (minutes) </td>
+		    </tr>
+			 <tr>
+			  
+			   	
+				{% if rs[7]==1 %}
+				 <td bgcolor="#00CC33" style="color:#FFFFFF">Full Present</td>
+				 {% elif rs[7]==2 %}
+				 <td bgcolor="#0099CC" style="color:#FFFFFF">Half Present</td>
+				 {% else %}
+				 <td bgcolor="#FF0000" style="color:#FFFFFF">Absent</td>
+				{% endif %}
+			   
+			   
+		    </tr>
+			 <tr style="border-bottom:#0000CC solid 4px">
+			   <td>Accuracy: {{rs[4]}}% 
+			   
+			   {% if rs[4]>=70 %}
+			   <div class="widget-content-right w-100">
+                                                    <div class="progress-bar-xs progress">
+                                                       <div class="progress-bar bg-success" role="progressbar" aria-valuenow="{{rs[4]}}" aria-valuemin="0" aria-valuemax="100" style="width: {{rs[4]}}%;"></div>
+                                                    </div>
+                                                </div>
+				{% elif rs[4]>=40 %}								
+			   <div class="widget-content-right w-100">
+                                                    <div class="progress-bar-xs progress">
+                                                       <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="{{rs[4]}}" aria-valuemin="0" aria-valuemax="100" style="width: {{rs[4]}}%;"></div>
+                                                    </div>
+                                                </div>
+				{% else %}							
+				<div class="widget-content-right w-100">
+                                                    <div class="progress-bar-xs progress">
+                                                        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="{{rs[4]}}" aria-valuemin="0" aria-valuemax="100" style="width: {{rs[4]}}%;"></div>
+                                                    </div>
+                                                </div>
+					{% endif %}							
+			   </td>
+		    </tr>
+            </table>
+		  </div>
+		{% endfor %}
+		</div>
+		
+		
+		
+		
+		</div>
+		
+		
+	
+		</form>
+		
+	</div>	<!--/.main-->
+	
+	<script src="../static/js/jquery-1.11.1.min.js"></script>
+	<script src="../static/js/bootstrap.min.js"></script>
+	<script src="../static/js/chart.min.js"></script>
+	<script src="../static/js/chart-data.js"></script>
+	<script src="../static/js/easypiechart.js"></script>
+	<script src="../static/js/easypiechart-data.js"></script>
+	<script src="../static/js/bootstrap-datepicker.js"></script>
+	<script src="../static/js/custom.js"></script>
+	<script>
+		window.onload = function () {
+	var chart1 = document.getElementById("line-chart").getContext("2d");
+	window.myLine = new Chart(chart1).Line(lineChartData, {
+	responsive: true,
+	scaleLineColor: "rgba(0,0,0,.2)",
+	scaleGridLineColor: "rgba(0,0,0,.05)",
+	scaleFontColor: "#c5c7cc"
+	});
+};
+	</script>
+		
+</body>
+</html>
